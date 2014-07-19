@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translator.UI", "Translator\Translator.UI.csproj", "{EB22EF98-A590-4B41-A249-3D6041F86C32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translator.Domain", "Translator.Domain\Translator.Domain.csproj", "{84A602EE-076A-4CE7-B226-C343128A0545}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translator.DataAccess", "Translator.DataAccess\Translator.DataAccess.csproj", "{64254686-D598-4F35-AE75-436A2248E619}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB22EF98-A590-4B41-A249-3D6041F86C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB22EF98-A590-4B41-A249-3D6041F86C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB22EF98-A590-4B41-A249-3D6041F86C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB22EF98-A590-4B41-A249-3D6041F86C32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84A602EE-076A-4CE7-B226-C343128A0545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84A602EE-076A-4CE7-B226-C343128A0545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84A602EE-076A-4CE7-B226-C343128A0545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84A602EE-076A-4CE7-B226-C343128A0545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64254686-D598-4F35-AE75-436A2248E619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64254686-D598-4F35-AE75-436A2248E619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64254686-D598-4F35-AE75-436A2248E619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64254686-D598-4F35-AE75-436A2248E619}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

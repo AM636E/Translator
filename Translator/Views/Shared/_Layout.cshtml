@@ -1,0 +1,86 @@
+﻿@{
+    bool IsAuthenticated = User.Identity.IsAuthenticated;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="container body-content">
+        <header>
+            <ul class="nav nav-tabs">
+                <li><a href="/">Home</a></li>
+                @if (IsAuthenticated == false)
+                {
+                    <li><a href="/account/register">Register</a></li>
+                    <li><a href="/account/login">Login</a></li>
+                }
+                else
+                {
+                    <li>
+                        <a href="/account/logout">
+                            Logout
+                        </a>
+                    </li>
+                    <li class="pull-right">
+                        <a href="#">
+                            @User.Identity.Name
+                        </a>
+                    </li>
+                }
+            </ul>
+        </header>
+        @RenderBody()
+
+        <section class="messages">
+            @if (ViewBag.Errors != null)
+            {
+                List<string> errors = ViewBag.Errors;
+
+                <section class="errors">
+                    @foreach (string error in errors)
+                    {
+                        <div class="danger">
+                            @error
+                        </div>
+                    }
+                </section>
+            }
+            @if (ViewBag.Messages != null)
+            {
+
+                List<string> messagse = ViewBag.Messages;
+
+                <section class="statuses">
+                    @foreach (string message in messagse)
+                    {
+                        <div class="alert-info">
+                            @message
+                        </div>
+                    }
+                </section>
+            }
+        </section>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @*@Scripts.Render("~/bundles/libraries")*@
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.elastic.source.js" type="text/javascript"></script>
+    <script src="~/Scripts/chosen.jquery.js" type="text/javascript"></script>
+    <script src="~/Scripts/main.js" type="text/javascript"></script>
+</body>
+</html>

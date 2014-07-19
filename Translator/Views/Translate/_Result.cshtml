@@ -1,0 +1,26 @@
+﻿@{    
+    List<TranslatorEntities.HistoryRecord> records = ViewBag.Records ?? new List<TranslatorEntities.HistoryRecord>();
+}
+
+<div class="contents">
+    @ViewBag.Text    
+</div>
+<div class="history">
+    @foreach (var record in records)
+    {
+        <div class="history-record">
+            <div class="translate-lang lang-source">
+                @record.SourceLanguage
+            </div>
+            <div class="translate-text text-source">
+                @record.SourceText
+            </div>
+            <div class="translate-lang lang-dest">
+                @record.DestinationLanguage
+            </div>
+            <div class="translate-text text-dest">
+                @record.DestinationText
+            </div>
+        </div>
+    }
+</div>
